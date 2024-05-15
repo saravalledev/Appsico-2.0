@@ -12,201 +12,194 @@
 </head>
 
 <body>
-    <div>
-        <!-- Aqui incluímos o menu -->
-        <header id="menu_container"></header>
+    <!-- Aqui incluímos o menu -->
+    <header id="menu_container"></header>
 
-        <!-- Conteúdo da sua página vai aqui -->
-        <main class="flex flex-wrap flex-row justify-between gap-32">
-            <div class='w-full flex flex-wrap justify-center items-center'>
-                <div class=" py-24 w-full flex flex-col items-center justify-center">
-                    <div class="flex h-full w-full items-center justify-center">
-                        <div class="w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full animate-spin">
-                        </div>
-                    </div>
-                    <div class="w-full flex flex-col gap-4 py-6 items-center justify-center ">
-                        <h1 class='text-gray-800 text-base font-bold  text-center'>
-                            Dr(a) Nome do Profissional
-                        </h1>
-
-                        <!--  Indicar para o Edição  -->
-                        <a href="/">
-                            <button
-                                class='border-2 rounded-lg py-2 px-10 text-base font-semibold text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white'>
-                                Alterar Foto
-                            </button>
-                        </a>
+    <!-- Conteúdo da sua página vai aqui -->
+    <main class="flex flex-wrap flex-row justify-between gap-32">
+        <div class='w-full flex flex-wrap justify-center items-center'>
+            <!-- Identificação do usuário-->
+            <div class=" py-24 w-full flex flex-col items-center justify-center">
+                <div class="flex h-full w-full items-center justify-center">
+                    <div class="w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full animate-spin">
                     </div>
                 </div>
-                <div class="flex w-9/12 h-auto my-12">
-                    <div class="w-full items-center justify-center ">
-                        <div class="bg-white px-10 py-10 rounded-lg border-2 border-gray">
-                            <h1 class='text-2xl font-semibold'>Seu perfil</h1>
-                            <p class='font-medium text-sm text-gray-500 mt-4'>Mantenha seus dados atualizados.
-                                Altere por aqui:</p>
-                            <form>
-                                <div>
-                                    <!--  Nome -->
-                                    <div class='my-4'>
-                                        <label class='text-sm text-gray-800 font-medium'>Nome</label>
-                                        <input type="name" id="name" name="name" onkeyup="formatName(this)"
-                                            class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
-                                            placeholder='Insira seu nome completo' />
-                                    </div>
-                                    <!--  Data Nasc -->
-                                    <div class='my-4'>
-                                        <label class='text-sm text-gray-800 font-medium'>Data de Nascimento</label>
-                                        <input type="date" id="birthDate" name="birthDate"
-                                            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-                                            class="w-full border-2 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm"
-                                            placeholder='(DD-MM-YYYY)' onblur="validateDateInput()" />
-                                    </div>
-                                    <!--  Email -->
-                                    <div class='my-4'>
-                                        <label class='text-sm text-gray-800 font-medium'>Email</label>
-                                        <input type="email" id="emailInput"
-                                            class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm"
-                                            placeholder='Insira seu email' oninput="handleEmailInput()" />
-                                    </div>
-                                    <!--  Contato -->
-                                    <div class='my-4'>
-                                        <label class='text-sm text-gray-800 font-medium'>Contato</label>
-                                        <input type="text" id="contactInput" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
+                <div class="w-full flex flex-col gap-4 py-6 items-center justify-center ">
+                    <h1 class='text-gray-800 text-base font-bold  text-center'>
+                        Dr(a) Nome do Profissional
+                    </h1>
+
+                    <!--  Indicar para o Edição  -->
+                    <a href="/">
+                        <button
+                            class='border-2 rounded-lg py-2 px-10 text-base font-semibold text-blue-500 border-blue-500 hover:bg-blue-500 hover:text-white'>
+                            Alterar Foto
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <!-- Formulário -->
+            <div class="flex w-9/12 h-auto my-12">
+                <div class="w-full items-center justify-center ">
+                    <div class="bg-white px-10 py-10 rounded-lg border-2 border-gray">
+                        <h1 class='text-2xl font-semibold'>Seu perfil</h1>
+                        <p class='font-medium text-sm text-gray-500 mt-4'>Mantenha seus dados atualizados.
+                            Altere por aqui:</p>
+                        <form>
+                            <!--  Nome -->
+                            <div class='my-4'>
+                                <label class='text-sm text-gray-800 font-medium'>Nome</label>
+                                <input type="name" id="name" name="name" onkeyup="formatName(this)"
+                                    class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
+                                    placeholder='Insira seu nome completo' />
+                            </div>
+                            <!--  Data Nasc -->
+                            <div class='my-4'>
+                                <label class='text-sm text-gray-800 font-medium'>Data de Nascimento</label>
+                                <input type="date" id="birthDate" name="birthDate" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                                    class="w-full border-2 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm"
+                                    placeholder='(DD-MM-YYYY)' onblur="validateDateInput()" />
+                            </div>
+                            <!--  Email -->
+                            <div class='my-4'>
+                                <label class='text-sm text-gray-800 font-medium'>Email</label>
+                                <input type="email" id="emailInput"
+                                    class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm"
+                                    placeholder='Insira seu email' oninput="handleEmailInput()" />
+                            </div>
+                            <!--  Contato -->
+                            <div class='my-4'>
+                                <label class='text-sm text-gray-800 font-medium'>Contato</label>
+                                <input type="text" id="contactInput" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
                                             bg-transparent placeholder:text-sm text-gray-800 text-sm"
-                                            placeholder='Insira seu contato (99) 99999-9999'
-                                            oninput="handleContactInput()" />
+                                    placeholder='Insira seu contato (99) 99999-9999' oninput="handleContactInput()" />
+                            </div>
+                            <!--  Local de Residencia -->
+                            <div class='my-4'>
+                                <label class='text-sm text-gray-800 font-medium'>Local de Residencia</label>
+                                <input type="text"
+                                    class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
+                                    placeholder='Insira seu local de residencia' maxlength="100" />
+                            </div>
+                            <!--  Idiomas -->
+                            <div class='my-4'>
+                                <label class='text-sm text-gray-800 font-medium'>Idiomas Falados</label>
+                                <div class="grid grid-cols-1 gap-y-3 mt-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="portuguese" name="portuguese" value="portuguese"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium'
+                                            for="portuguese">Português</label>
                                     </div>
-                                    <!--  Local de Residencia -->
-                                    <div class='my-4'>
-                                        <label class='text-sm text-gray-800 font-medium'>Local de Residencia</label>
-                                        <input type="text"
-                                            class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
-                                            placeholder='Insira seu local de residencia' maxlength="100" />
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="libra" name="libra" value="libra"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium' for="libra">Língua
+                                            Brasileira de
+                                            Sinais/LIBRAS</label>
                                     </div>
-                                    <!--  Idiomas -->
-                                    <div class='my-4'>
-                                        <label class='text-sm text-gray-800 font-medium'>Idiomas Falados</label>
-                                        <div class="grid grid-cols-1 gap-y-3 mt-4">
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="portuguese" name="portuguese"
-                                                    value="portuguese"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="portuguese">Português</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="libra" name="libra" value="libra"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium' for="libra">Língua
-                                                    Brasileira de
-                                                    Sinais/LIBRAS</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="english" name="english" value="english"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="english">Inglês</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="italian" name="italian" value="italian"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="italian">Italiano</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="german" name="german" value="german"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="german">Alemão</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="japonese" name="japonese" value="japonese"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="japonese">Japonês</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="othersLanguage" name="othersLanguage"
-                                                    value="othersLanguage"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="othersLanguage">Outros:</label>
-                                            </div>
-                                            <input type="text" id="othersLanguageInput" name="othersLanguageInput"
-                                                class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
-                                                placeholder="Digite outros idiomas" disabled />
-                                        </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="english" name="english" value="english"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium' for="english">Inglês</label>
                                     </div>
-                                    <!--  Especialidades -->
-                                    <div class='my-4'>
-                                        <label class='text-sm text-gray-800 font-medium'>Especialidades</label>
-                                        <div class="grid grid-cols-1 gap-y-3 mt-4">
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="tcc" name="tcc" value="tcc"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium' for="tcc">TCC</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="⁠humanist" name="⁠humanist" value="⁠humanist"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="⁠humanist">Humanista</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="psychologyAnalytical"
-                                                    name="psychologyAnalytical" value="psychologyAnalytical"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="psychologyAnalytical">Psicologia
-                                                    Analítica</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="⁠behavioral" name="⁠behavioral"
-                                                    value="psychologyAnalytical"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="⁠behavioral">⁠Comportamental</label>
-                                            </div>
-                                            <div class="flex items-center">
-                                                <input type="checkbox" id="othersSpecialties" name="othersSpecialties"
-                                                    value="othersSpecialties"
-                                                    class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
-                                                <label class='text-sm text-gray-800 font-medium'
-                                                    for="othersSpecialties">Outros:</label>
-                                            </div>
-                                            <input type="text" id="othersInputSpecialties" name="othersInputSpecialties"
-                                                class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
-                                                placeholder="Digite caso tenha outras especialidades" />
-                                        </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="italian" name="italian" value="italian"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium' for="italian">Italiano</label>
                                     </div>
-                                    <!--  Biografia -->
-                                    <div class='my-4'>
-                                        <label class='text-xs font-medium'>Biografia</label>
-                                        <textarea id="bioTextarea" maxLength="500" rows="10" 
-                                            class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent 
-                                            placeholder:text-xs text-xs"
-                                            placeholder='Insira sua biografia (máximo de 500 caracteres)'></textarea>
-                                        <p id="remainingChars" class="text-xs text-gray-500 mt-1">500 caracteres
-                                            restantes</p>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="german" name="german" value="german"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium' for="german">Alemão</label>
                                     </div>
-                                    <div class='mt-8 flex flex-col gap-y-4'>
-                                        <a href="/src/routes/profileProfessional/index.html">
-                                            <button class='flex border-2 rounded-lg py-2 px-10 text-base font-semibold hover:text-white text-blue-500 hover:bg-blue-500 border-blue-500'>
-                                                Salvar Alterações
-                                            </button>
-                                        </a>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="japonese" name="japonese" value="japonese"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium' for="japonese">Japonês</label>
                                     </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="othersLanguage" name="othersLanguage"
+                                            value="othersLanguage"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium'
+                                            for="othersLanguage">Outros:</label>
+                                    </div>
+                                    <input type="text" id="othersLanguageInput" name="othersLanguageInput"
+                                        class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
+                                        placeholder="Digite outros idiomas" disabled />
                                 </div>
-                            </form>
-                        </div>
+                            </div>
+                            <!--  Especialidades -->
+                            <div class='my-4'>
+                                <label class='text-sm text-gray-800 font-medium'>Especialidades</label>
+                                <div class="grid grid-cols-1 gap-y-3 mt-4">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="tcc" name="tcc" value="tcc"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium' for="tcc">TCC</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="⁠humanist" name="⁠humanist" value="⁠humanist"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium'
+                                            for="⁠humanist">Humanista</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="psychologyAnalytical" name="psychologyAnalytical"
+                                            value="psychologyAnalytical"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium'
+                                            for="psychologyAnalytical">Psicologia
+                                            Analítica</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="⁠behavioral" name="⁠behavioral"
+                                            value="psychologyAnalytical"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium'
+                                            for="⁠behavioral">⁠Comportamental</label>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="othersSpecialties" name="othersSpecialties"
+                                            value="othersSpecialties"
+                                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                                        <label class='text-sm text-gray-800 font-medium'
+                                            for="othersSpecialties">Outros:</label>
+                                    </div>
+                                    <input type="text" id="othersInputSpecialties" name="othersInputSpecialties"
+                                        class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm'
+                                        placeholder="Digite caso tenha outras especialidades" />
+                                </div>
+                            </div>
+                            <!--  Biografia -->
+                            <div class='my-4'>
+                                <label class='text-xs font-medium'>Biografia</label>
+                                <textarea id="bioTextarea" maxLength="500" rows="10" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent 
+                                            placeholder:text-xs text-xs"
+                                    placeholder='Insira sua biografia (máximo de 500 caracteres)'></textarea>
+                                <p id="remainingChars" class="text-xs text-gray-500 mt-1">500 caracteres
+                                    restantes</p>
+                            </div>
+                            <!-- Salvar Alterações -->
+                            <div class='mt-8 flex flex-col gap-y-4'>
+                                <a href="/src/routes/profileProfessional/index.html">
+                                    <button
+                                        class='flex border-2 rounded-lg py-2 px-10 text-base font-semibold hover:text-white text-blue-500 hover:bg-blue-500 border-blue-500'>
+                                        Salvar Alterações
+                                    </button>
+                                </a>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-        <!-- Aqui incluímos o rodapé -->
-        <footer id="footer_container"></footer>
-    </div>
+    <!-- Aqui incluímos o rodapé -->
+    <footer id="footer_container"></footer>
+
     <script src="/src/functions_js/layout-script.js"></script>
 </body>
 

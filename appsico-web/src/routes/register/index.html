@@ -34,13 +34,14 @@
 
                         <form>
                             <div class='flex flex-wrap gap-y-6'>
+                                <!-- Nome -->
                                 <div class='w-full'>
                                     <label class='text-base text-gray-800 font-medium'>Nome</label>
                                     <input type="name" id="name" name="name" onkeyup="formatName(this)"
                                         class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-base text-gray-800 text-base'
                                         placeholder='Insira seu nome completo' />
                                 </div>
-
+                                <!-- Tipo de Usuário -->
                                 <div class='flex flex-col w-full gap-2'>
                                     <label class='text-base font-medium'>Tipo de Usuário</label>
                                     <select class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent'>
@@ -50,12 +51,14 @@
                                             tratamento</option>
                                     </select>
                                 </div>
+                                <!-- Email -->
                                 <div class='w-full'>
                                     <label class='text-base text-gray-800 font-medium'>Email</label>
                                     <input type="email" id="emailInput"
                                         class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-base text-gray-800 text-base"
                                         placeholder='Insira seu email' oninput="handleEmailInput()" />
                                 </div>
+                                <!-- Contato -->
                                 <div class='w-full'>
                                     <label class='text-base text-gray-800 font-medium'>Contato</label>
                                     <input type="text" id="contactInput" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
@@ -63,37 +66,36 @@
                                         placeholder='Insira seu contato (99) 99999-9999'
                                         oninput="handleContactInput()" />
                                 </div>
-
                                 <!-- Senha -->
                                 <div class="w-full">
                                     <label for="password1" class="block mb-1">Digite a senha:</label>
                                     <div class="relative">
                                         <input type="password" id="password1" placeholder="Digite a senha" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
-                                                bg-transparent placeholder:text-base text-gray-800 text-base">
+                                                bg-transparent placeholder:text-base text-gray-800 text-base"
+                                            maxlength="8">
                                     </div>
                                     <p id="passwordRequirements" class="text-sm my-2"></p>
                                 </div>
+                                <!-- Verifica Senha -->
                                 <div class="w-full">
-                                    <label for="password2" class="block mb-1">Verifique a senha:</label>
+                                    <label for="password2" class="block mb-1">Confirme a senha:</label>
                                     <div class="relative">
                                         <input type="password" id="password2" placeholder="Verifique a senha" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
-                                                bg-transparent placeholder:text-base text-gray-800 text-base">
-
+                                                bg-transparent placeholder:text-base text-gray-800 text-base"
+                                            maxlength="8">
                                     </div>
-                                <p id="message" class="text-sm my-2"></p>
+                                    <p id="message" class="text-sm my-2"></p>
 
                                 </div>
-
-                                <div class="flex items-center w-full">
+                                <!-- Mostra senhas -->
+                                <div class="flex items-center w-full mb-6">
                                     <input type="checkbox" id="showPasswords"
                                         class="h-5 w-5 appearance-none rounded-full border-2 border-gray-400">
                                     <label for="showPasswords"
                                         class="px-2 font-medium text-base text-gray-800 cursor-pointer">Mostrar
                                         senhas</label>
                                 </div>
-
-
-
+                                <!-- Termos e Condições -->
                                 <div class="flex justify-center items-center">
                                     <input type="checkbox" id='terms'
                                         class="h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
@@ -102,12 +104,14 @@
                                         <a href="" class="text-blue-500 font-bold underline">Termos e condições.</a>
                                     </label>
                                 </div>
+                                <!-- Registrar -->
                                 <div class='w-full'>
                                     <button
                                         class='py-3 p-6 w-full rounded-xl bg-blue-500 text-white text-lg text font-bold'>
                                         Registrar
                                     </button>
                                 </div>
+                                <!-- Entrar -->
                                 <div class=' flex justify-start items-center w-full gap-2'>
                                     <p class='font-medium text-base w-auto '>Já possui uma conta?</p>
                                     <a class="w-auto font-medium text-base text-blue-500 underline"
@@ -116,17 +120,13 @@
                                     </a>
                                 </div>
                             </div>
-
                         </form>
-
                     </div>
                 </div>
-
                 <div class="hidden relative lg:flex h-full items-center justify-center w-1/2">
                     <div class="w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full animate-spin">
                     </div>
                 </div>
-
             </div>
         </main>
 

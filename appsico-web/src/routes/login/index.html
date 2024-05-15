@@ -28,18 +28,21 @@
 
                         <form>
                             <div class='flex flex-wrap gap-y-6'>
+                                <!-- Email -->
                                 <div class='w-full'>
                                     <label class='text-base text-gray-800 font-medium'>Email</label>
                                     <input type="email" id="emailInput"
                                         class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-base text-gray-800 text-base"
                                         placeholder='Insira seu email' oninput="handleEmailInput()" />
                                 </div>
+                                <!-- Senha -->
                                 <div class="w-full">
                                     <label class='text-base font-medium'>Senha</label>
                                     <input type="password"
                                         class='w-full b border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent'
-                                        placeholder='Insira sua senha' value="" maxlength="8"/>
+                                        placeholder='Insira sua senha' value="" maxlength="8" />
                                 </div>
+                                <!-- Lembre-me / Esqueci a senha -->
                                 <div class='flex justify-between items-center w-full'>
                                     <div class="flex justify-center items-center">
                                         <input type="checkbox" id='remember'
@@ -50,17 +53,16 @@
                                         a
                                         senha</button>
                                 </div>
+                                <!-- Entrar -->
                                 <div class='w-full'>
                                     <button
                                         class='py-3 p-6 w-full rounded-xl bg-blue-500 text-white text-lg text font-bold'>
                                         Entrar
                                     </button>
                                 </div>
-
+                                <!-- Registrar -->
                                 <div class=' flex justify-start items-center w-full gap-2'>
-                                    <p class='font-medium text-base w-auto '>Não tem uma conta?
-
-                                    </p>
+                                    <p class='font-medium text-base w-auto '>Não tem uma conta?</p>
                                     <a class="w-auto font-medium text-base text-blue-500 underline"
                                         href="/src/routes/register/index.html">
                                         Registre-se
@@ -68,15 +70,11 @@
                                 </div>
                             </div>
                         </form>
-
                     </div>
                 </div>
-
                 <div class="hidden relative lg:flex h-full items-center justify-center w-1/2">
-                    <div class="w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full animate-spin">
-                    </div>
+                    <div class="w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full animate-spin"></div>
                 </div>
-
             </div>
         </main>
 
