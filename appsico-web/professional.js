@@ -39,7 +39,17 @@ const Professional = database.define('professional', {
     password_professional: {
         type: Sequelize.STRING(100),
         allowNull: false
-    }
+    },
+
+    type_service_professional: {
+        type: Sequelize.STRING(15),
+        allowNull: false
+    },
+
+    date_birth_professional: {
+        type: Sequelize.DATE,
+        allowNull: false
+    },
 })
 
 module.exports = Professional;
