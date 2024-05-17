@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const database = require('./db');
+const database = require('../db');
 
 const Professional = database.define('professional', {
     id_professional: {
@@ -48,6 +48,10 @@ const Professional = database.define('professional', {
 
     date_birth_professional: {
         type: Sequelize.DATE,
+        allowNull: false
+    },
+    language: {
+        type: Sequelize.STRING(15),
         allowNull: false
     },
 })
