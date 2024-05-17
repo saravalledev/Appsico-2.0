@@ -1,0 +1,77 @@
+
+<!-- Card de de psicologo -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Specialty Box</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <div class='searchDiv grid bg-greyIsh rounded-[10px] p-[2rem] py-6 my-8'>
+            <div
+                class='firstDiv flex justify-between items-center rounded-[18px] gap[10px] bg-white p-4 shadow-lg shadow-greyIsh-700'>
+                <div class='flex gap-2 items-center'>
+                    <AiOutlineSearch class='text-base icon' />
+                    <input type="text"
+                        class='bg-transparent text-blue-500 focus:outline-none  w-[100%] placeholder:text-sm'
+                        placeholder='Busque psicólogos...' />
+                </div>
+            </div>
+            <div class='mt-4'>
+                <label class='text-xs font-medium'>Tipos de Atendimento</label>
+                <div class="grid grid-cols-1 gap-y-3 mt-4">
+                    <div class="flex items-center">
+                        <input type="checkbox" id="healthInsurance" name="healthInsurance" value="healthInsurance"
+                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400 checked:bg-blue-500 checked:border-transparent" />
+                        <label class='text-xs font-medium' for="healthInsurance">Convênio</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="particular" name="particular" value="particular"
+                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400 checked:bg-blue-500 checked:border-transparent" />
+                        <label class='text-xs font-medium' for="particular">Particular</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="social" name="social" value="social"
+                            class="mr-2 h-5 w-5 appearance-none rounded-full border-2 border-gray-400 checked:bg-blue-500 checked:border-transparent" />
+                        <label class='text-xs font-medium' for="social">Social</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jobContainer flex gap-12 justify-center flex-wrap items-center py-10 mx-8">
+            <div
+                class="group group/item singleJob w-[250px] p-[20px] bg-white rounded-[10px] hover:bg-blueColor shadow-lg shadow-greyIsh-400/700 hover:shadow-lg cursor-pointer">
+                <span class='flex justify-between items-center gap-4'>
+                    <h1 class='text-[16px] font-semibold text-gray-800 group-hover:text-white'>Nome do Psicólogo</h1>
+                </span>
+
+                <h6 class='text-[#ccc]'>Abordagem: Abordagem do Psicólogo</h6>
+
+                <p class='text-[13px] text-[#959595] pt-[20px] border-t-[2px] mt-[20px] group-hover:text-white'>
+                    Descrição do Psicólogo
+                </p>
+
+                <div class='company flex items-center gap-2'>
+                    <span class='text-[14px] py-[1rem] block group-hover:text-white'>Tipo de Atendimento</span>
+                </div>
+
+                <button
+                    class='border-[2px] rounded-[10px] block p-[10px] w-full text-[14px] font-semibold text-gray-800 hover:bg-blueColor group-hover/item:text-gray-800 group-hover:text-white'>
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

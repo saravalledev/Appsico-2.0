@@ -1,0 +1,135 @@
+<!-- 
+
+  FALTA: Link do tailwind para cores e parametros definidos em .js
+
+ -->
+
+<div class="w-9/12 p-4 m-auto flex justify-between items-center">
+  <a href="/src/routes/home/index.html">
+    <div class="logoDiv">
+      <h1 class="logo text-3xl text-blue-500">
+        <strong>App</strong>sico
+      </h1>
+    </div>
+  </a>
+
+  <nav>
+    <!-- Menu mobile -->
+    <section class=" flex lg:hidden">
+      <div class="HAMBURGER-ICON space-y-2 cursor-pointer" id="hamburgerIcon">
+        <span class="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+        <span class="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+        <span class="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+      </div>
+
+      <div class="hideMenuNav" id="mobileMenu">
+        <div class="CROSS-ICON absolute top-0 right-0 px-8 py-8 cursor-pointer" id="crossIcon">
+          <svg class="h-8 w-8 text-gray-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </div>
+        <ul class="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
+          <li class="border-b border-gray-600 my-8 uppercase">
+            <a href="/src/routes/home/index.html">Home</a>
+          </li>
+          <li class="border-b border-gray-600 my-8 uppercase">
+            <a href="/src/routes/psychologists/index.html" id="psychologistsLink">Psicólogos</a>
+          </li>
+          <li class="border-b border-gray-600 my-8 uppercase">
+            <a href="/src/routes/login/index.html" id="loginLink">Login</a>
+          </li>
+          <li class="border-b border-gray-600 my-8 uppercase">
+            <a href="/src/routes/register/index.html" id="registroLink">Registre-se</a>
+          </li>
+          <li class="border-b border-gray-600 my-8 uppercase">
+            <a href="/src/routes/profileProfessional/index.html" id="profileProfessionalLink">Perfil Profissional</a>
+          </li>
+          <li class="border-b border-gray-600 my-8 uppercase">
+            <a href="/src/routes/profilePatient/index.html" id="profilePatientLink">Perfil Paciente</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Menu Desktop -->
+    <ul class="DESKTOP-MENU hidden space-x-8 lg:flex list-none">
+      <li class="border-gray-600 my-8 text-lg list-item relative">
+        <a href="/src/routes/home/index.html" class="group inline-block relative">Home
+          <span class="indicator absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+        </a>
+      </li>
+      
+
+
+      <li class="border-gray-600 my-8 text-lg list-item relative">
+        <a href="/src/routes/psychologists/index.html" class="group inline-block relative">Psicólogos
+          <span
+            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+        </a>
+      </li>
+      <li class="border-gray-600 my-8 text-lg list-item relative">
+        <a href="/src/routes/login/index.html" class="group inline-block relative">Login
+          <span
+            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+        </a>
+      </li>
+      <li class="border-gray-600 my-8 text-lg list-item relative">
+        <a href="/src/routes/register/index.html" class="group inline-block relative">Registre-se
+          <span
+            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+        </a>
+      </li>
+      <li class="border-gray-600 my-8 text-lg list-item relative">
+        <a href="/src/routes/profileProfessional/index.html" class="group inline-block relative">Perfil Profissional
+          <span
+            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+        </a>
+      </li>
+      <li class="border-gray-600 my-8 text-lg list-item relative">
+        <a href="/src/routes/profilePatient/index.html" class="group inline-block relative">Perfil Paciente
+          <span
+            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+
+        </a>
+      </li>
+
+      <!-- Seção para dados de autenticação 
+      <li class="border-gray-600 my-8 text-lg list-item relative">
+        <a href="/src/routes/profilePatient/index.html" class="group inline-block relative">Perfil Paciente
+          <span
+            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+        </a>
+      </li>-->
+
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+<script>
+  // JavaScript para toggle do menu mobile
+  const hamburgerIcon = document.getElementById('hamburgerIcon');
+  const crossIcon = document.getElementById('crossIcon');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburgerIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('showMenuNav');
+  });
+
+  crossIcon.addEventListener('click', () => {
+    mobileMenu.classList.remove('showMenuNav');
+  });
+
+  // JavaScript para fechar o menu mobile quando um link é clicado
+  const mobileLinks = document.querySelectorAll('.MENU-LINK-MOBILE-OPEN a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('showMenuNav');
+    });
+  });
+</script>

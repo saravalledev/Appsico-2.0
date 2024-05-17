@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Home - Appsico</title>
+  <link rel="stylesheet" href="/src/tailwind.config.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div>
+    <!-- Aqui incluímos o menu -->
+    <header id="menu_container"></header>
+
+    <!-- Conteúdo da sua página vai aqui -->
+    <main class="flex flex-wrap flex-row justify-between gap-32">
+    
+    </main>
+
+    <!-- Aqui incluímos o rodapé -->
+    <footer id="footer_container"></footer>
+  </div>
+  <script src="/src/functions_js/layout-script.js"></script>
+</body>
+
+</html>
+
+
+/* Formata campo para inserção de CRM */
+document.addEventListener('DOMContentLoaded', function() {
+    const crpInput = document.getElementById('crp');
+    const errorText = document.createElement('p');
+
+    /* Mensagem de erro */
+    errorText.className = 'text-red-500 text-xs mt-1 hidden';
+    errorText.textContent = 'O CRP deve ter entre 4 e 6 dígitos.';
+    crpInput.parentNode.appendChild(errorText);
+
+    crpInput.addEventListener('input', function() {
+        const inputValue = this.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        this.value = inputValue; // Atualiza o valor do input
+
+        if (inputValue.length < 4 || inputValue.length > 6) {
+            errorText.classList.remove('hidden');
+        } else {
+            errorText.classList.add('hidden');
+        }
+    });
+});
+
+/* Formata  */
+
