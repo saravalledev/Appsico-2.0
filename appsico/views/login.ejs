@@ -9,13 +9,20 @@
     <title>Login - Appsico</title>
     <link rel="stylesheet" href="/src/tailwind.config.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <script src="/src/functions_js/form-script.js"></script>
 </head>
 
 <body>
     <div>
         <!-- Aqui incluímos o menu -->
-        <header id="menu_container"></header>
+        <header id="header_container">
+            <div class="w-9/12 p-4 m-auto flex justify-between items-center">
+                <div class="">
+                  <h1 class="text-3xl text-blue-500">
+                    <strong>App</strong>sico
+                  </h1>
+                </div>
+            </div>
+          </header>
 
         <!-- Conteúdo da sua página vai aqui -->
         <main class="flex flex-wrap flex-row justify-center">
@@ -26,7 +33,7 @@
                         <p class='font-medium text-base text-gray-500 my-4'>Por favor insira suas credenciais
                         </p>
 
-                        <form>
+                        <form method="POST" action="/log">
                             <div class='flex flex-wrap gap-y-6'>
                                 <!-- Email -->
                                 <div class='w-full'>
@@ -55,7 +62,7 @@
                                 </div>
                                 <!-- Entrar -->
                                 <div class='w-full'>
-                                    <button
+                                    <button id="loginButton" type="submit"
                                         class='py-3 p-6 w-full rounded-xl bg-blue-500 text-white text-lg text font-bold'>
                                         Entrar
                                     </button>
@@ -64,7 +71,7 @@
                                 <div class=' flex justify-start items-center w-full gap-2'>
                                     <p class='font-medium text-base w-auto '>Não tem uma conta?</p>
                                     <a class="w-auto font-medium text-base text-blue-500 underline"
-                                        href="/src/routes/register/index.html">
+                                        href="/register">
                                         Registre-se
                                     </a>
                                 </div>
@@ -79,9 +86,11 @@
         </main>
 
         <!-- Aqui incluímos o rodapé -->
-        <footer id="footer_container"></footer>
+        <footer id="footer_container">
+      <%- include('containers/footer')%>
+    </footer>
     </div>
-    <script src="/src/functions_js/layout-script.js"></script>
+    <script src="/javascripts/form-script.js"></script>
 </body>
 
 </html>

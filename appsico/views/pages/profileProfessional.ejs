@@ -14,7 +14,9 @@
 <body>
   <div>
     <!-- Aqui incluímos o menu -->
-    <header id="menu_container"></header>
+    <header id="header_container">
+      <%- include('../containers/header')%>
+    </header>
 
     <!-- Conteúdo da sua página vai aqui -->
     <main class="flex flex-wrap flex-row justify-between gap-32">
@@ -30,7 +32,7 @@
             </h1>
 
             <!--  Indicar para o Edição  -->
-            <a href="/src/routes/editProfileProfessional/index.html">
+            <a href="editProfileProfessional">
             <button class='flex border-2 rounded-lg py-2 px-10 text-base font-semibold hover:text-white text-blue-500 hover:bg-blue-500 border-blue-500'>
               Editar Perfil
             </button>
@@ -101,9 +103,10 @@
     </main>
 
     <!-- Aqui incluímos o rodapé -->
-    <footer id="footer_container"></footer>
-  </div>
-  <script src="/src/functions_js/layout-script.js"></script>
+    <footer id="footer_container">
+      <%- include('../containers/footer')%>
+    </footer>
+  </div>  
 </body>
 
 </html>

@@ -1,24 +1,5 @@
-/* INSTRUÇÕES CRUD */
-(async () => {
-    /* CONEXÃO INICIAL PARA TODAS AS OPERAÇÕES */
-    const database = require('./db');
-    const Professional = require('./modules/professional');
-    const User = require('./modules/user');
-    await database.sync();
+/* INSTRUÇÕES CRUD 
 
-    const newUser = await User.create({
-        name_user: "Bob",
-        date_birth_user: "2000-05-06",
-        biography_user: "Olá, sou o Bob! Estou sempre em busca de novas aventuras e aprendizados. Adoro música, filmes e viagens.",
-        contact_user: 11933425523,
-        email_user: "bob.contato@gmail.com",
-        password_user: "Bob123",
-    })
-console.log(newUser);
-})();
-
-
-/* 
 IMPREMINDO RESULTADOS
 
     imprime o que acabou de inserir
@@ -50,7 +31,7 @@ console.log(newProfessional);
 
 const newUser = await User.create({
         name_user: "Bob",
-        date_birth_user: "2000-05-06",
+        birthDate_user: "2000-05-06",
         biography_user: "Olá, sou o Bob! Estou sempre em busca de novas aventuras e aprendizados. Adoro música, filmes e viagens.",
         contact_user: 11933425523,
         email_user: "bob.contato@gmail.com",

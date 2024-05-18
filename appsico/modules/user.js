@@ -16,12 +16,12 @@ const User = database.define('user', {
 
     date_birth_user: {
         type: Sequelize.DATE,
-        allowNull: false
+        allowNull: true
     },
 
     biography_user: {
         type: Sequelize.STRING(500),
-        allowNull: false
+        allowNull: true
     },
 
     contact_user: {

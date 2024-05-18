@@ -1,4 +1,3 @@
-/* Possivel melhora na formatação de datas */
 
 
 /* Função para formatar a primeira letra de cada palavra em maiúscul */
@@ -188,72 +187,71 @@ document.addEventListener("DOMContentLoaded", function () {
     var message = document.getElementById("message");
     var requirements = document.getElementById("passwordRequirements");
     var showPasswordsCheckbox = document.getElementById("showPasswords");
-  
+
     function updateRequirements(hasUpperCase, hasLowerCase, hasNumber, hasSpecialChar, isLengthValid) {
-      var requirementsText = "";
-  
-      if (!hasUpperCase) {
-        requirementsText += "<span class='text-red-500'>- Pelo menos uma letra maiúscula;</span><br>";
-      } else {
-        requirementsText += "<span class='text-green-500'>- Pelo menos uma letra maiúscula;</span><br>";
-      }
-      if (!hasLowerCase) {
-        requirementsText += "<span class='text-red-500'>- Pelo menos uma letra minúscula;</span><br>";
-      } else {
-        requirementsText += "<span class='text-green-500'>- Pelo menos uma letra minúscula;</span><br>";
-      }
-      if (!hasNumber) {
-        requirementsText += "<span class='text-red-500'>- Pelo menos um número;</span><br>";
-      } else {
-        requirementsText += "<span class='text-green-500'>- Pelo menos um número;</span><br>";
-      }
-      if (!hasSpecialChar) {
-        requirementsText += "<span class='text-red-500'>- Pelo menos um caractere especial;</span><br>";
-      } else {
-        requirementsText += "<span class='text-green-500'>- Pelo menos um caractere especial;</span><br>";
-      }
-      if (!isLengthValid) {
-        requirementsText += "<span class='text-red-500'>- Mínimo de 8 caracteres;</span><br>";
-      } else {
-        requirementsText += "<span class='text-green-500'>- Mínimo de 8 caracteres;</span><br>";
-      }
-  
-      requirements.innerHTML = requirementsText;
+        var requirementsText = "";
+
+        if (!hasUpperCase) {
+            requirementsText += "<span class='text-red-500'>- Pelo menos uma letra maiúscula;</span><br>";
+        } else {
+            requirementsText += "<span class='text-green-500'>- Pelo menos uma letra maiúscula;</span><br>";
+        }
+        if (!hasLowerCase) {
+            requirementsText += "<span class='text-red-500'>- Pelo menos uma letra minúscula;</span><br>";
+        } else {
+            requirementsText += "<span class='text-green-500'>- Pelo menos uma letra minúscula;</span><br>";
+        }
+        if (!hasNumber) {
+            requirementsText += "<span class='text-red-500'>- Pelo menos um número;</span><br>";
+        } else {
+            requirementsText += "<span class='text-green-500'>- Pelo menos um número;</span><br>";
+        }
+        if (!hasSpecialChar) {
+            requirementsText += "<span class='text-red-500'>- Pelo menos um caractere especial;</span><br>";
+        } else {
+            requirementsText += "<span class='text-green-500'>- Pelo menos um caractere especial;</span><br>";
+        }
+        if (!isLengthValid) {
+            requirementsText += "<span class='text-red-500'>- Mínimo de 8 caracteres;</span><br>";
+        } else {
+            requirementsText += "<span class='text-green-500'>- Mínimo de 8 caracteres;</span><br>";
+        }
+
+        requirements.innerHTML = requirementsText;
     }
-  
+
     function updateMessageText(isPasswordMatch) {
-      message.textContent = isPasswordMatch ? "As senhas são iguais!" : "As senhas não são iguais.";
-      message.classList.remove(isPasswordMatch ? "text-red-500" : "text-green-500");
-      message.classList.add(isPasswordMatch ? "text-green-500" : "text-red-500");
+        message.textContent = isPasswordMatch ? "As senhas são iguais!" : "As senhas não são iguais.";
+        message.classList.remove(isPasswordMatch ? "text-red-500" : "text-green-500");
+        message.classList.add(isPasswordMatch ? "text-green-500" : "text-red-500");
     }
-  
+
     showPasswordsCheckbox.addEventListener("change", function () {
-      var type = this.checked ? "text" : "password";
-      password1Input.type = type;
-      password2Input.type = type;
+        var type = this.checked ? "text" : "password";
+        password1Input.type = type;
+        password2Input.type = type;
     });
-  
+
     password1Input.addEventListener("input", function () {
-      var password1 = password1Input.value;
-  
-      var hasUpperCase = /[A-Z]/.test(password1);
-      var hasLowerCase = /[a-z]/.test(password1);
-      var hasNumber = /\d/.test(password1);
-      var hasSpecialChar = /[^A-Za-z0-9]/.test(password1);
-      var isLengthValid = password1.length >= 8;
-  
-      updateRequirements(hasUpperCase, hasLowerCase, hasNumber, hasSpecialChar, isLengthValid);
-  
-      var isPasswordMatch = password1 === password2Input.value;
-      updateMessageText(isPasswordMatch);
+        var password1 = password1Input.value;
+
+        var hasUpperCase = /[A-Z]/.test(password1);
+        var hasLowerCase = /[a-z]/.test(password1);
+        var hasNumber = /\d/.test(password1);
+        var hasSpecialChar = /[^A-Za-z0-9]/.test(password1);
+        var isLengthValid = password1.length >= 8;
+
+        updateRequirements(hasUpperCase, hasLowerCase, hasNumber, hasSpecialChar, isLengthValid);
+
+        var isPasswordMatch = password1 === password2Input.value;
+        updateMessageText(isPasswordMatch);
     });
-  
+
     password2Input.addEventListener("input", function () {
-      var isPasswordMatch = password1Input.value === password2Input.value;
-      updateMessageText(isPasswordMatch);
+        var isPasswordMatch = password1Input.value === password2Input.value;
+        updateMessageText(isPasswordMatch);
     });
-  });
-  
+});
 
 
 

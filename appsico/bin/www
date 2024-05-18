@@ -5,6 +5,8 @@
 
 const database = require('../db');
 const Professional = require('../modules/professional');
+const User = require('../modules/user');
+
 
 await database.sync();
 

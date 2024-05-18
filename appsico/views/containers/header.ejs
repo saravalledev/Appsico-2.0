@@ -1,11 +1,10 @@
 <!-- 
-
-  FALTA: Link do tailwind para cores e parametros definidos em .js
-
- -->
+  PENDENCIAS:
+  - Aparição do menu tri-bar
+-->
 
 <div class="w-9/12 p-4 m-auto flex justify-between items-center">
-  <a href="/src/routes/home/index.html">
+  <a href="/home">
     <div class="logoDiv">
       <h1 class="logo text-3xl text-blue-500">
         <strong>App</strong>sico
@@ -32,22 +31,19 @@
         </div>
         <ul class="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
           <li class="border-b border-gray-600 my-8 uppercase">
-            <a href="/src/routes/home/index.html">Home</a>
+            <a href="/home">Home</a>
           </li>
           <li class="border-b border-gray-600 my-8 uppercase">
-            <a href="/src/routes/psychologists/index.html" id="psychologistsLink">Psicólogos</a>
+            <a href="/psychologists" id="psychologistsLink">Psicólogos</a>
           </li>
           <li class="border-b border-gray-600 my-8 uppercase">
-            <a href="/src/routes/login/index.html" id="loginLink">Login</a>
+            <a href="/profileProfessional" id="profileProfessionalLink">Perfil Profissional</a>
           </li>
           <li class="border-b border-gray-600 my-8 uppercase">
-            <a href="/src/routes/register/index.html" id="registroLink">Registre-se</a>
+            <a href="/ProfileUser" id="ProfileUserLink">Perfil Paciente</a>
           </li>
           <li class="border-b border-gray-600 my-8 uppercase">
-            <a href="/src/routes/profileProfessional/index.html" id="profileProfessionalLink">Perfil Profissional</a>
-          </li>
-          <li class="border-b border-gray-600 my-8 uppercase">
-            <a href="/src/routes/profilePatient/index.html" id="profilePatientLink">Perfil Paciente</a>
+            <a href="/" id="LogOut">Sair</a>
           </li>
         </ul>
       </div>
@@ -56,60 +52,38 @@
     <!-- Menu Desktop -->
     <ul class="DESKTOP-MENU hidden space-x-8 lg:flex list-none">
       <li class="border-gray-600 my-8 text-lg list-item relative">
-        <a href="/src/routes/home/index.html" class="group inline-block relative">Home
-          <span class="indicator absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
+        <a href="/home" class="group inline-block relative">Home
+          <span
+            class="indicator absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
         </a>
       </li>
-      
-
-
       <li class="border-gray-600 my-8 text-lg list-item relative">
-        <a href="/src/routes/psychologists/index.html" class="group inline-block relative">Psicólogos
+        <a href="/psychologists" class="group inline-block relative">Psicólogos
           <span
             class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
         </a>
       </li>
       <li class="border-gray-600 my-8 text-lg list-item relative">
-        <a href="/src/routes/login/index.html" class="group inline-block relative">Login
+        <a href="/profileProfessional" class="group inline-block relative">Perfil Profissional
           <span
             class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
         </a>
       </li>
       <li class="border-gray-600 my-8 text-lg list-item relative">
-        <a href="/src/routes/register/index.html" class="group inline-block relative">Registre-se
+        <a href="/profileUser" class="group inline-block relative">Perfil Paciente
           <span
             class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
         </a>
       </li>
       <li class="border-gray-600 my-8 text-lg list-item relative">
-        <a href="/src/routes/profileProfessional/index.html" class="group inline-block relative">Perfil Profissional
+        <a href="/" class="group inline-block relative">Sair
           <span
             class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
         </a>
       </li>
-      <li class="border-gray-600 my-8 text-lg list-item relative">
-        <a href="/src/routes/profilePatient/index.html" class="group inline-block relative">Perfil Paciente
-          <span
-            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
-
-        </a>
-      </li>
-
-      <!-- Seção para dados de autenticação 
-      <li class="border-gray-600 my-8 text-lg list-item relative">
-        <a href="/src/routes/profilePatient/index.html" class="group inline-block relative">Perfil Paciente
-          <span
-            class="absolute left-0 bottom-0 w-full h-0.5 bg-transparent group-hover:bg-blue-500 transition-all duration-300"></span>
-        </a>
-      </li>-->
-
-
     </ul>
   </nav>
 </div>
-
-
-
 
 <script>
   // JavaScript para toggle do menu mobile
