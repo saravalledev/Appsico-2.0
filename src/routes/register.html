@@ -1,0 +1,214 @@
+<!-- 
+    No cadastro, deixei que o CRM e a Bografica fossem preenchidos apenas depois do login
+    para evitar espanto, ou tédio na demora do cadastro.
+
+    É importante ressaltar que devemos evidenciar ao usuário como preencher os mesmos
+    assim como a relevancia do "paciente" chegar se o "psicologo" possui um crp cadastrado.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cadastro - Appsico</title>
+  <link rel="stylesheet" href="/src/tailwind.config.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="../public/javascripts/form-script.js"></script>
+</head>
+
+<body>
+  <div>
+    <!-- Aqui incluímos o menu -->
+    <header id="header_container">
+      <div class="w-9/12 p-4 m-auto flex justify-between items-center">
+        <div class="">
+          <h1 class="text-3xl text-blue-500">
+            <strong>App</strong>sico
+          </h1>
+        </div>
+      </div>
+    </header>
+
+    <!-- Conteúdo da sua página vai aqui -->
+    <main class="flex flex-wrap flex-row justify-center">
+      <div class="flex my-12 justify-between w-9/12">
+        <div class="w-full flex items-center justify-center lg:w-1/2">
+          <div class="overflow-hidden shadow-md rounded-lg bg-white px-6 py-4 ">
+            <h1 class='text-4xl font-semibold'> Bem vindo!</h1>
+            <p class='font-medium text-base text-gray-500 my-4'>Por favor insira suas credenciais
+            </p>
+
+            <!-- Formulário para Pofessional -->
+           <!--  <form method="POST" action="/newProfessoinal">
+              <div class='flex flex-wrap gap-y-6'>
+                <div class='w-full'>
+                  <label class='text-base text-gray-800 font-medium'>Nome</label>
+                  <input type="name" id="name" name="name_professional"
+                    class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-base text-gray-800 text-base'
+                    placeholder='Insira seu nome completo' />
+                </div>
+                <div class='w-full'>
+                  <label class='text-sm text-gray-800 font-medium'>Data de Nascimento</label>
+                  <input type="date" id="birthDate" name="date_birth_professional" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                    class="w-full border-2 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm"
+                    placeholder='(DD-MM-YYYY)' onblur="validateDateInput()" />
+                </div>
+                <div class='w-full'>
+                  <label class='text-base text-gray-800 font-medium'>Email</label>
+                  <input type="email" name="email_professional" class=" w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-base
+                    text-gray-800 text-base" placeholder='Insira seu email' oninput="handleEmailInput()" />
+                </div>
+                <div class='w-full'>
+                  <label class='text-base text-gray-800 font-medium'>Contato</label>
+                  <input type="text" id="contactInput" name="contact_professional" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
+                            -transparent placeholder:text-base text-gray-800 text-base"
+                    placeholder='Insira seu contato (99) 99999-9999' oninput="handleContactInput()" />
+                </div>
+                <div class='w-full'>
+                  <label for="crp" class='text-sm text-gray-800 font-medium'>CRP</label>
+                  <input type="text" id="crp" name="crp_professional" class="w-full
+                          border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent
+                          placeholder:text-sm text-gray-800 text-sm" placeholder='Insira seu CRP' maxlength="6" />
+                </div>
+                <div class="w-full">
+                  <label for="password1" class="block mb-1">Digite a senha:</label>
+                  <div class="relative">
+                    <input type="password" name="password_professional" id="password1" placeholder="Digite a senha"
+                      class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
+                                                bg-transparent placeholder:text-base text-gray-800 text-base"
+                      maxlength="8">
+                  </div>
+                  <p id="passwordRequirements" class="text-sm my-2"></p>
+                </div>
+                <div class="w-full">
+                  <label for="password2" class="block mb-1">Confirme a senha:</label>
+                  <div class="relative">
+                    <input type="password" id="password2" name="password2_professional" placeholder="Verifique a senha"
+                      class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
+                                                bg-transparent placeholder:text-base text-gray-800 text-base"
+                      maxlength="8">
+                  </div>
+                  <p id="message" class="text-sm my-2"></p>
+                </div>
+                <div class="flex items-center w-full mb-6">
+                  <input type="checkbox" id="showPasswords"
+                    class="h-5 w-5 appearance-none rounded-full border-2 border-gray-400">
+                  <label for="showPasswords" class="px-2 font-medium text-base text-gray-800 cursor-pointer">Mostrar
+                    senhas</label>
+                </div>
+                <div class="flex justify-center items-center">
+                  <input type="checkbox" id='terms'
+                    class="h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                  <label class='px-2 font-medium text-base text-gray-800' for="terms">Concordo e
+                    aceito os
+                    <a href="" class="text-blue-500 font-bold underline">Termos e condições.</a>
+                  </label>
+                </div>
+                <div class='w-full'>
+                  <button id="registerButton" type="submit"
+                    class='py-3 p-6 w-full rounded-xl bg-blue-500 text-white text-lg text font-bold'>
+                    Registrar
+                  </button>
+                </div>
+                <div class=' flex justify-start items-center w-full gap-2'>
+                  <p class='font-medium text-base w-auto '>Já possui uma conta?</p>
+                  <a class="w-auto font-medium text-base text-blue-500 underline" href="login">
+                    Entre por aqui
+                  </a>
+                </div>
+              </div>
+            </form> -->
+            
+            <!-- Formulário para Users -->
+            <form method="POST" action="/newUser">
+              <div class='flex flex-wrap gap-y-6'>
+                <div class='w-full'>
+                  <label class='text-base text-gray-800 font-medium'>Nome</label>
+                  <input type="name" id="name" name="name" onkeyup="formatName(this)"
+                    class='w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-base text-gray-800 text-base'
+                    placeholder='Insira seu nome completo' />
+                </div>
+                <div class='w-full'>
+                  <label class='text-sm text-gray-800 font-medium'>Data de Nascimento</label>
+                  <input type="date" id="birthDate" name="date_birth_user" pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+                    class="w-full border-2 rounded-xl p-4 mt-1 bg-transparent placeholder:text-sm text-gray-800 text-sm"
+                    placeholder='(DD-MM-YYYY)' onblur="validateDateInput()" />
+                </div>
+                <div class='w-full'>
+                  <label class='text-base text-gray-800 font-medium'>Email</label>
+                  <input type="email" id="emailInput" name="email_user" class=" w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent placeholder:text-base
+        text-gray-800 text-base" placeholder='Insira seu email' oninput="handleEmailInput()" />
+                </div>
+                <div class='w-full'>
+                  <label class='text-base text-gray-800 font-medium'>Contato</label>
+                  <input type="text" id="contactInput" name="contact_user" class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
+                -transparent placeholder:text-base text-gray-800 text-base"
+                    placeholder='Insira seu contato (99) 99999-9999' oninput="handleContactInput()" />
+                </div>
+                <div class="w-full">
+                  <label for="password1" class="block mb-1">Digite a senha:</label>
+                  <div class="relative">
+                    <input type="password" name="password_user" id="password1" placeholder="Digite a senha"
+                      class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
+                                    bg-transparent placeholder:text-base text-gray-800 text-base" maxlength="8">
+                  </div>
+                  <p id="passwordRequirements" class="text-sm my-2"></p>
+                </div>
+                <div class="w-full">
+                  <label for="password2" class="block mb-1">Confirme a senha:</label>
+                  <div class="relative">
+                    <input type="password" id="password2" name="password2_user" placeholder="Verifique a senha"
+                      class="w-full border-2 border-gray-100 rounded-xl p-4 mt-1
+                                    bg-transparent placeholder:text-base text-gray-800 text-base" maxlength="8">
+                  </div>
+                  <p id="message" class="text-sm my-2"></p>
+                </div>
+                <div class="flex items-center w-full mb-6">
+                  <input type="checkbox" id="showPasswords"
+                    class="h-5 w-5 appearance-none rounded-full border-2 border-gray-400">
+                  <label for="showPasswords" class="px-2 font-medium text-base text-gray-800 cursor-pointer">Mostrar
+                    senhas</label>
+                </div>
+                <div class="flex justify-center items-center">
+                  <input type="checkbox" id='terms'
+                    class="h-5 w-5 appearance-none rounded-full border-2 border-gray-400" />
+                  <label class='px-2 font-medium text-base text-gray-800' for="terms">Concordo e
+                    aceito os
+                    <a href="" class="text-blue-500 font-bold underline">Termos e condições.</a>
+                  </label>
+                </div>
+                <div class='w-full'>
+                  <button id="registerButton" type="submit"
+                    class='py-3 p-6 w-full rounded-xl bg-blue-500 text-white text-lg text font-bold'>
+                    Registrar
+                  </button>
+                </div>
+                <div class=' flex justify-start items-center w-full gap-2'>
+                  <p class='font-medium text-base w-auto '>Já possui uma conta?</p>
+                  <a class="w-auto font-medium text-base text-blue-500 underline" href="/">
+                    Entre por aqui
+                  </a>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+        <div class="hidden relative lg:flex h-full items-center justify-center w-1/2">
+          <div class="w-60 h-60 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full animate-spin">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Aqui incluímos o rodapé -->
+    <footer id="footer_container">
+      <%- include('containers/footer')%>
+    </footer>
+  </div>
+  <script src="/javascripts/form-script.js"></script>
+</body>
+
+</html>
